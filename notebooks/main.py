@@ -37,7 +37,8 @@ for i in range(deg):
     for j in range(deg):
         hankel_matrix[i, j] = newton_sums[i+j]
 
-eigenvalues = hankel_matrix.eigenvals()
+eigenvalues_dict = hankel_matrix.eigenvals()
+eigenvalues = [key for key, value in eigenvalues_dict.items() for _ in range(value)]
 
 # Count the positive and negative eigenvalues
 positive_eigenvalues = sum(1 for eigenvalue in eigenvalues if eigenvalue > 0)
