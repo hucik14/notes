@@ -1,3 +1,2 @@
-sympy
-numpy
-matplotlib
+sympy>1.11
+matplotlib>3.7
